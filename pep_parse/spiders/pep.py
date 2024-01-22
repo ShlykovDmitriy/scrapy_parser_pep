@@ -7,7 +7,7 @@ class PepSpider(scrapy.Spider):
     """Паук для парсинга информации с сайта peps.python.org."""
     name = 'pep'
     allowed_domains = ['peps.python.org']
-    start_urls = ['https://peps.python.org/']
+    start_urls = [f'https://{allowed_domains[0]}/']
 
     def parse(self, response):
         """Парсинг ссылок на страницы PEP"""
